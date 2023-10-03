@@ -10,16 +10,16 @@ const SetupPage = async () => {
     where: {
       members: {
         some: {
-          profileId: profile.id,
-        },
-      },
-    },
+          profileId: profile.id
+        }
+      }
+    }
   });
 
   if (server) {
     return redirect(`/servers/${server.id}`);
   }
-  return <InitialModal></InitialModal>
+  return <InitialModal />;
 };
 
 export default SetupPage;

@@ -1,5 +1,6 @@
 "use client";
 
+import axios from "axios";
 import {
   Dialog,
   DialogContent,
@@ -23,6 +24,7 @@ import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useEffect, useState } from "react";
 import { FileUpload } from "@/components/file-upload";
+import { useRouter } from "next/navigation";
 
 const formSchema = z.object({
   name: z.string().min(1, {
@@ -34,6 +36,11 @@ const formSchema = z.object({
 });
 
 export const InitialModal = () => {
+  const [isMounted, setIsMounted] = useState(false);
+  const router = useRouter();
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -45,18 +52,21 @@ export const InitialModal = () => {
   const isLoading = form.formState.isSubmitting;
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    console.log(values);
+    try {
+      await axios.post("/api/servers", values);
+      form.reset();
+      router.refresh();
+      window.location.reload();
+    } catch (error) {
+      console.log(error);
+    }
   };
 
-  const [isMounted, setIsMounted] = useState(false);
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+  if(!isMounted) {
+    return null;
+  }
 
-  if(!isMounted) return null;
-  
   return (
-    <div>
       <Dialog open>
         <DialogContent className="bg-white text-black p-0 overflow-hidden">
           <DialogHeader className="pt-8 px-6">
@@ -87,8 +97,8 @@ export const InitialModal = () => {
                       </FormItem>
                     )}
                   />
-                  
                 </div>
+
                 <FormField
                   control={form.control}
                   name="name"
@@ -110,7 +120,7 @@ export const InitialModal = () => {
                           {...field}
                         />
                       </FormControl>
-                      <FormMessage></FormMessage>
+                      <FormMessage />
                     </FormItem>
                   )}
                 />
@@ -124,7 +134,6 @@ export const InitialModal = () => {
           </Form>
         </DialogContent>
       </Dialog>
-    </div>
   );
 };
 
