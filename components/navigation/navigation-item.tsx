@@ -29,7 +29,7 @@ export const NavigationItem = ({
             align="center"
             label={name}
         >
-            <button onClick={() => {}}
+            <button onClick={onClick}
             className="group relative flex items-center"
             >
               <div className={cn(
