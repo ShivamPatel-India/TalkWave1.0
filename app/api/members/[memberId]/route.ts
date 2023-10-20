@@ -20,7 +20,7 @@ export async function DELETE(
     }
 
     if (!params.memberId) {
-      return new NextResponse("Mmeber ID missing", { status: 400 });
+      return new NextResponse("Member ID missing", { status: 400 });
     }
 
     const server = await db.server.update({
