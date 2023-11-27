@@ -26,7 +26,7 @@ export const ChatVideoButton = () => {
   
   const Icon = isVideo ? VideoOff : Video;
   const tooltipLabel = isVideo ? "End video call" : "Start video call";
-
+ 
   return (
     <ActionTooltip side="bottom" label={tooltipLabel}>
       <button onClick={onClick} className="hover:opacity-75 transition mr-4">
