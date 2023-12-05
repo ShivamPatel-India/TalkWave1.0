@@ -1,36 +1,53 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+# TalkWave
+
+TalkWave is a dynamic communication platform built using NextJS, providing users with a versatile and real-time collaborative experience. Similar to Discord, it includes features such as server creation, membership management, various chat options, and advanced media sharing capabilities.
+
+## Key Features
+
+- **Server Creation and Membership Management:**
+  - Easily create servers and manage memberships for seamless collaboration.
+
+- **Versatile Chat Options:**
+  - Supports both dark and light modes.
+  - Group chat and direct messaging features for personalized communication.
+
+- **Channel Creation and Media Sharing:**
+  - Create different channels within a server.
+  - Share various media files, including audio and video channels implemented using Socket.IO.
+
+- **Audio and Video Calls:**
+  - Robust solution for audio and video calls using Livekit, overcoming notable development challenges.
+
+## Technologies Used
+
+- NextJS
+- Tailwind CSS
+- Shards UI
+- TypeScript
+- Prisma
+- Third-Party Services:
+  - Clerk.com for authentication
+  - Planetscale for database management
+  - UploadThing for media storage
+  - Livekit for audio and video calls
+
+## Challenges Overcome
+
+The project encountered significant challenges during the development of audio and video calls, which were successfully overcome to deliver a robust and reliable feature. Additionally, meticulous effort was invested in managing different user roles and tailoring access to various features based on these roles.
+
 ## Getting Started
 
-First, run the development server:
+To get started with TalkWave, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone the repository: `git clone https://github.com/your-username/talkwave.git`
+2. Install dependencies: `npm install`
+3. Update the .env file with enviroment variables.
+4. Run the application: `npm run dev`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Deployment of this project is pending as Vercel does not support functionality built using Sockets. Therefore, I am looking for some open-source alternative. Any suggestions are highly appreciated!
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Happy Coding!
