@@ -20,6 +20,9 @@ TalkWave is a dynamic communication platform built using NextJS, providing users
 - **Audio and Video Calls:**
   - Robust solution for audio and video calls using Livekit, overcoming notable development challenges.
 
+![image](https://github.com/ShivamPatel-India/TalkWave1.0/assets/70719016/1c4e1048-6ae9-4cd9-b61e-d5243b4d7cd3)
+
+
 ## Technologies Used
 
 - NextJS
