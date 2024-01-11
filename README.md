@@ -62,7 +62,8 @@ To get started with TalkWave, follow these steps:
     
     LIVEKIT_API_KEY=#
     LIVEKIT_API_SECRET=#
-    NEXT_PUBLIC_LIVEKIT_URL=#```
+    NEXT_PUBLIC_LIVEKIT_URL=#
+   ```
 5. Run the application: `npm run dev`
 
 ## Deployment
