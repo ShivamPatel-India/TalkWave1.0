@@ -4,6 +4,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 TalkWave is a dynamic communication platform built using NextJS, providing users with a versatile and real-time collaborative experience. Similar to Discord, it includes features such as server creation, membership management, various chat options, and advanced media sharing capabilities.
 
+## Live Application
+[live app link](https://talkwave10-production.up.railway.app/)
+
 ## Key Features
 
 - **Server Creation and Membership Management:**
@@ -20,7 +23,10 @@ TalkWave is a dynamic communication platform built using NextJS, providing users
 - **Audio and Video Calls:**
   - Robust solution for audio and video calls using Livekit, overcoming notable development challenges.
 
-![image](https://github.com/ShivamPatel-India/TalkWave1.0/assets/70719016/1c4e1048-6ae9-4cd9-b61e-d5243b4d7cd3)
+![image](![image](https://github.com/ShivamPatel-India/TalkWave1.0/assets/70719016/f064958c-ed72-40a1-941e-1f2474ec0b55)
+![image](https://github.com/ShivamPatel-India/TalkWave1.0/assets/70719016/17e9ecff-f31b-4b5e-bd4b-b267bd8743fd)
+![image](https://github.com/ShivamPatel-India/TalkWave1.0/assets/70719016/8863ff2d-c495-414d-a6b7-2995740df8f7)
+![image](https://github.com/ShivamPatel-India/TalkWave1.0/assets/70719016/b1982d5d-d9c6-4ac4-a69b-0b8ed9bba4fe)
 
 
 ## Technologies Used
